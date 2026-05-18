@@ -10,3 +10,4 @@
 
 - [Report 1 - Pandas Exercises](Report06042026.md)
 - [Report 2 - Airbnb Data Cleaning Report](Airbnb_cleaning/Airbnb_Cleaning_Report.md)
+- [Report 3 - Airbnb Univariate Analysis Report](Univariate_Analysis_Report.md)
