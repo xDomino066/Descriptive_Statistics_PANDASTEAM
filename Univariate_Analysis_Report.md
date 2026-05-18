@@ -886,7 +886,7 @@ For `price`, Q1 and Q3 show the middle half of the market. This is useful becaus
 
 ## 7. Price distribution
 
-Price is the most important continuous variable for the Airbnb dataset. We start with the full distribution and then use a limited x-axis to see the main part of the data more clearly.
+Price is the most important continuous variable for the Airbnb dataset. We start with the full distribution and then use a limited x axis to see the main part of the data more clearly.
 
 
 ```python
@@ -951,7 +951,7 @@ plt.show()
     
 
 
-The price distribution is strongly right-skewed. Most listings are in the lower price range, but a small number of very expensive listings create a long right tail.
+The price distribution is strongly right skewed. Most listings are in the lower price range, but a small number of very expensive listings create a long right tail.
 
 ## 8. Price outliers
 
@@ -1100,7 +1100,7 @@ price_outliers[['listing_id', 'name', 'room_type', 'borough', 'price']].sort_val
 
 
 
-The boxplot confirms that there are many high-price outliers. This is why the median is a better typical value for price than the mean.
+The boxplot confirms that there are many high price outliers. This is why the median is a better typical value for price than the mean.
 
 ## 9. Rating distribution
 
@@ -1273,7 +1273,7 @@ df_clean[['availability_365', 'number_of_reviews', 'reviews_per_month']].describ
 
 
 
-`number_of_reviews` is right-skewed. Most listings have a small number of reviews, while a few listings have a lot of them.
+`number_of_reviews` is right skewed. Most listings have a small number of reviews, while a few listings have a lot of them.
 
 ## 11. Categorical variables
 
@@ -1588,7 +1588,7 @@ Entire places are usually more expensive than private or shared rooms. Manhattan
 
 From the univariate analysis we can summarize the Airbnb data as follows:
 
-- Price is strongly right-skewed.
+- Price is strongly right skewed.
 - The median price is more useful than the mean because of high outliers.
 - The boxplot shows many price outliers.
 - Ratings are usually high and stay within the 0-5 range after cleaning.
@@ -1596,4 +1596,4 @@ From the univariate analysis we can summarize the Airbnb data as follows:
 - Manhattan and Brooklyn have the largest number of listings.
 - Entire places and Manhattan listings tend to have higher prices.
 
-This report gives a first one-variable-at-a-time view of the Airbnb dataset before moving to bivariate or multivariate analysis.
+This report gives a first one variable at a time view of the Airbnb dataset before moving to bivariate or multivariate analysis.
