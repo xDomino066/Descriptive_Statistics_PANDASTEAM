@@ -26,148 +26,15 @@ pd.set_option('display.max_columns', 50)
 ```python
 airbnb = pd.read_csv('data/airbnb.csv', index_col='Unnamed: 0')
 
-airbnb.head()
+print(airbnb.head().to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>listing_id</th>
-      <th>name</th>
-      <th>host_id</th>
-      <th>host_name</th>
-      <th>neighbourhood_full</th>
-      <th>coordinates</th>
-      <th>room_type</th>
-      <th>price</th>
-      <th>number_of_reviews</th>
-      <th>last_review</th>
-      <th>reviews_per_month</th>
-      <th>availability_365</th>
-      <th>rating</th>
-      <th>number_of_stays</th>
-      <th>5_stars</th>
-      <th>listing_added</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>13740704</td>
-      <td>Cozy,budget friendly, cable inc, private entra...</td>
-      <td>20583125</td>
-      <td>Michel</td>
-      <td>Brooklyn, Flatlands</td>
-      <td>(40.63222, -73.93398)</td>
-      <td>Private room</td>
-      <td>45$</td>
-      <td>10</td>
-      <td>2018-12-12</td>
-      <td>0.70</td>
-      <td>85</td>
-      <td>4.100954</td>
-      <td>12.0</td>
-      <td>0.609432</td>
-      <td>2018-06-08</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>22005115</td>
-      <td>Two floor apartment near Central Park</td>
-      <td>82746113</td>
-      <td>Cecilia</td>
-      <td>Manhattan, Upper West Side</td>
-      <td>(40.78761, -73.96862)</td>
-      <td>Entire home/apt</td>
-      <td>135$</td>
-      <td>1</td>
-      <td>2019-06-30</td>
-      <td>1.00</td>
-      <td>145</td>
-      <td>3.367600</td>
-      <td>1.2</td>
-      <td>0.746135</td>
-      <td>2018-12-25</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>21667615</td>
-      <td>Beautiful 1BR in Brooklyn Heights</td>
-      <td>78251</td>
-      <td>Leslie</td>
-      <td>Brooklyn, Brooklyn Heights</td>
-      <td>(40.7007, -73.99517)</td>
-      <td>Entire home/apt</td>
-      <td>150$</td>
-      <td>0</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>65</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2018-08-15</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>6425850</td>
-      <td>Spacious, charming studio</td>
-      <td>32715865</td>
-      <td>Yelena</td>
-      <td>Manhattan, Upper West Side</td>
-      <td>(40.79169, -73.97498)</td>
-      <td>Entire home/apt</td>
-      <td>86$</td>
-      <td>5</td>
-      <td>2017-09-23</td>
-      <td>0.13</td>
-      <td>0</td>
-      <td>4.763203</td>
-      <td>6.0</td>
-      <td>0.769947</td>
-      <td>2017-03-20</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>22986519</td>
-      <td>Bedroom on the lively Lower East Side</td>
-      <td>154262349</td>
-      <td>Brooke</td>
-      <td>Manhattan, Lower East Side</td>
-      <td>(40.71884, -73.98354)</td>
-      <td>Private room</td>
-      <td>160$</td>
-      <td>23</td>
-      <td>2019-06-12</td>
-      <td>2.29</td>
-      <td>102</td>
-      <td>3.822591</td>
-      <td>27.6</td>
-      <td>0.649383</td>
-      <td>2020-10-23</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+       listing_id                                                name    host_id host_name          neighbourhood_full            coordinates        room_type price  number_of_reviews last_review  reviews_per_month  availability_365    rating  number_of_stays   5_stars listing_added
+    0    13740704  Cozy,budget friendly, cable inc, private entrance!   20583125    Michel         Brooklyn, Flatlands  (40.63222, -73.93398)     Private room   45$                 10  2018-12-12               0.70                85  4.100954             12.0  0.609432    2018-06-08
+    1    22005115               Two floor apartment near Central Park   82746113   Cecilia  Manhattan, Upper West Side  (40.78761, -73.96862)  Entire home/apt  135$                  1  2019-06-30               1.00               145  3.367600              1.2  0.746135    2018-12-25
+    2    21667615                   Beautiful 1BR in Brooklyn Heights      78251    Leslie  Brooklyn, Brooklyn Heights   (40.7007, -73.99517)  Entire home/apt  150$                  0         NaN                NaN                65       NaN              NaN       NaN    2018-08-15
+    3     6425850                           Spacious, charming studio   32715865    Yelena  Manhattan, Upper West Side  (40.79169, -73.97498)  Entire home/apt   86$                  5  2017-09-23               0.13                 0  4.763203              6.0  0.769947    2017-03-20
+    4    22986519               Bedroom on the lively Lower East Side  154262349    Brooke  Manhattan, Lower East Side  (40.71884, -73.98354)     Private room  160$                 23  2019-06-12               2.29               102  3.822591             27.6  0.649383    2020-10-23
 
 
 ## 2. Short data preparation
@@ -244,164 +111,17 @@ df_clean = df_clean.groupby('listing_id', as_index=False).agg(aggregation_rules)
 
 print('Original shape:', airbnb.shape)
 print('Prepared shape:', df_clean.shape)
-df_clean.head()
+print(df_clean.head().to_string())
 ```
 
     Original shape: (10019, 16)
     Prepared shape: (9993, 18)
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>listing_id</th>
-      <th>name</th>
-      <th>host_id</th>
-      <th>host_name</th>
-      <th>coordinates</th>
-      <th>room_type</th>
-      <th>price</th>
-      <th>number_of_reviews</th>
-      <th>last_review</th>
-      <th>reviews_per_month</th>
-      <th>availability_365</th>
-      <th>rating</th>
-      <th>number_of_stays</th>
-      <th>5_stars</th>
-      <th>listing_added</th>
-      <th>borough</th>
-      <th>neighbourhood</th>
-      <th>is_rated</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>3831</td>
-      <td>Cozy Entire Floor of Brownstone</td>
-      <td>4869</td>
-      <td>LisaRoxanne</td>
-      <td>(40.68514, -73.95976)</td>
-      <td>Entire place</td>
-      <td>89.0</td>
-      <td>270</td>
-      <td>2019-07-05</td>
-      <td>4.64</td>
-      <td>194</td>
-      <td>3.273935</td>
-      <td>324.0</td>
-      <td>0.757366</td>
-      <td>2018-12-30</td>
-      <td>Brooklyn</td>
-      <td>Clinton Hill</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>6848</td>
-      <td>Only 2 stops to Manhattan studio</td>
-      <td>15991</td>
-      <td>Allen &amp; Irina</td>
-      <td>(40.70837, -73.95352)</td>
-      <td>Entire place</td>
-      <td>140.0</td>
-      <td>148</td>
-      <td>2019-06-29</td>
-      <td>1.20</td>
-      <td>46</td>
-      <td>3.495760</td>
-      <td>177.6</td>
-      <td>0.789743</td>
-      <td>2018-12-24</td>
-      <td>Brooklyn</td>
-      <td>Williamsburg</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>7322</td>
-      <td>Chelsea Perfect</td>
-      <td>18946</td>
-      <td>Doti</td>
-      <td>(40.74192, -73.99501)</td>
-      <td>Private Room</td>
-      <td>140.0</td>
-      <td>260</td>
-      <td>2019-07-01</td>
-      <td>2.12</td>
-      <td>12</td>
-      <td>4.389051</td>
-      <td>312.0</td>
-      <td>0.669873</td>
-      <td>2018-12-26</td>
-      <td>Manhattan</td>
-      <td>Chelsea</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>7726</td>
-      <td>Hip Historic Brownstone Apartment with Backyard</td>
-      <td>20950</td>
-      <td>Adam And Charity</td>
-      <td>(40.67592, -73.94694)</td>
-      <td>Entire place</td>
-      <td>99.0</td>
-      <td>53</td>
-      <td>2019-06-22</td>
-      <td>4.44</td>
-      <td>21</td>
-      <td>3.305382</td>
-      <td>63.6</td>
-      <td>0.640251</td>
-      <td>2018-12-17</td>
-      <td>Brooklyn</td>
-      <td>Crown Heights</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>12303</td>
-      <td>1bdr w private bath. in lofty apt</td>
-      <td>47618</td>
-      <td>Yolande</td>
-      <td>(40.69673, -73.97584)</td>
-      <td>Private Room</td>
-      <td>120.0</td>
-      <td>25</td>
-      <td>2018-09-30</td>
-      <td>0.23</td>
-      <td>311</td>
-      <td>4.568745</td>
-      <td>30.0</td>
-      <td>0.918593</td>
-      <td>2018-03-27</td>
-      <td>Brooklyn</td>
-      <td>Fort Greene</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+       listing_id                                             name  host_id         host_name            coordinates     room_type  price  number_of_reviews last_review  reviews_per_month  availability_365    rating  number_of_stays   5_stars listing_added    borough  neighbourhood  is_rated
+    0        3831                  Cozy Entire Floor of Brownstone     4869       LisaRoxanne  (40.68514, -73.95976)  Entire place   89.0                270  2019-07-05               4.64               194  3.273935            324.0  0.757366    2018-12-30   Brooklyn   Clinton Hill         1
+    1        6848                 Only 2 stops to Manhattan studio    15991     Allen & Irina  (40.70837, -73.95352)  Entire place  140.0                148  2019-06-29               1.20                46  3.495760            177.6  0.789743    2018-12-24   Brooklyn   Williamsburg         1
+    2        7322                                  Chelsea Perfect    18946              Doti  (40.74192, -73.99501)  Private Room  140.0                260  2019-07-01               2.12                12  4.389051            312.0  0.669873    2018-12-26  Manhattan        Chelsea         1
+    3        7726  Hip Historic Brownstone Apartment with Backyard    20950  Adam And Charity  (40.67592, -73.94694)  Entire place   99.0                 53  2019-06-22               4.44                21  3.305382             63.6  0.640251    2018-12-17   Brooklyn  Crown Heights         1
+    4       12303                1bdr w private bath. in lofty apt    47618           Yolande  (40.69673, -73.97584)  Private Room  120.0                 25  2018-09-30               0.23               311  4.568745             30.0  0.918593    2018-03-27   Brooklyn    Fort Greene         1
 
 
 ## 3. Variables selected for univariate analysis
@@ -422,94 +142,15 @@ numeric_columns = ['price', 'rating', 'number_of_reviews', 'availability_365', '
 categorical_columns = ['room_type', 'borough']
 
 analysis_data = df_clean[numeric_columns + categorical_columns].copy()
-analysis_data.head()
+print(analysis_data.head().to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>price</th>
-      <th>rating</th>
-      <th>number_of_reviews</th>
-      <th>availability_365</th>
-      <th>reviews_per_month</th>
-      <th>room_type</th>
-      <th>borough</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>89.0</td>
-      <td>3.273935</td>
-      <td>270</td>
-      <td>194</td>
-      <td>4.64</td>
-      <td>Entire place</td>
-      <td>Brooklyn</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>140.0</td>
-      <td>3.495760</td>
-      <td>148</td>
-      <td>46</td>
-      <td>1.20</td>
-      <td>Entire place</td>
-      <td>Brooklyn</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>140.0</td>
-      <td>4.389051</td>
-      <td>260</td>
-      <td>12</td>
-      <td>2.12</td>
-      <td>Private Room</td>
-      <td>Manhattan</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>99.0</td>
-      <td>3.305382</td>
-      <td>53</td>
-      <td>21</td>
-      <td>4.44</td>
-      <td>Entire place</td>
-      <td>Brooklyn</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>120.0</td>
-      <td>4.568745</td>
-      <td>25</td>
-      <td>311</td>
-      <td>0.23</td>
-      <td>Private Room</td>
-      <td>Brooklyn</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+       price    rating  number_of_reviews  availability_365  reviews_per_month     room_type    borough
+    0   89.0  3.273935                270               194               4.64  Entire place   Brooklyn
+    1  140.0  3.495760                148                46               1.20  Entire place   Brooklyn
+    2  140.0  4.389051                260                12               2.12  Private Room  Manhattan
+    3   99.0  3.305382                 53                21               4.44  Entire place   Brooklyn
+    4  120.0  4.568745                 25               311               0.23  Private Room   Brooklyn
 
 
 ## 4. Summary statistics
@@ -519,100 +160,15 @@ The first step in univariate analysis is a summary table. We look at count, mean
 
 ```python
 summary_basic = analysis_data[numeric_columns].describe().T.round(2)
-summary_basic
+print(summary_basic.to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>price</th>
-      <td>9993.0</td>
-      <td>149.73</td>
-      <td>202.51</td>
-      <td>10.0</td>
-      <td>70.00</td>
-      <td>105.00</td>
-      <td>175.00</td>
-      <td>8000.00</td>
-    </tr>
-    <tr>
-      <th>rating</th>
-      <td>7922.0</td>
-      <td>4.01</td>
-      <td>0.57</td>
-      <td>3.0</td>
-      <td>3.52</td>
-      <td>4.03</td>
-      <td>4.51</td>
-      <td>5.00</td>
-    </tr>
-    <tr>
-      <th>number_of_reviews</th>
-      <td>9993.0</td>
-      <td>22.47</td>
-      <td>43.20</td>
-      <td>0.0</td>
-      <td>1.00</td>
-      <td>5.00</td>
-      <td>22.00</td>
-      <td>510.00</td>
-    </tr>
-    <tr>
-      <th>availability_365</th>
-      <td>9993.0</td>
-      <td>112.30</td>
-      <td>131.65</td>
-      <td>0.0</td>
-      <td>0.00</td>
-      <td>44.00</td>
-      <td>226.00</td>
-      <td>365.00</td>
-    </tr>
-    <tr>
-      <th>reviews_per_month</th>
-      <td>9993.0</td>
-      <td>1.07</td>
-      <td>1.54</td>
-      <td>0.0</td>
-      <td>0.04</td>
-      <td>0.37</td>
-      <td>1.55</td>
-      <td>16.22</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+                        count    mean     std   min    25%     50%     75%      max
+    price              9993.0  149.73  202.51  10.0  70.00  105.00  175.00  8000.00
+    rating             7922.0    4.01    0.57   3.0   3.52    4.03    4.51     5.00
+    number_of_reviews  9993.0   22.47   43.20   0.0   1.00    5.00   22.00   510.00
+    availability_365   9993.0  112.30  131.65   0.0   0.00   44.00  226.00   365.00
+    reviews_per_month  9993.0    1.07    1.54   0.0   0.04    0.37    1.55    16.22
 
 
 We add more statistics from Exercise 8: variance, IQR, skewness, kurtosis, and coefficient of variation.
@@ -627,82 +183,15 @@ summary_extra['skewness'] = analysis_data[numeric_columns].skew()
 summary_extra['kurtosis'] = analysis_data[numeric_columns].kurt()
 summary_extra['cv_percent'] = analysis_data[numeric_columns].std() / analysis_data[numeric_columns].mean() * 100
 
-summary_extra.round(2)
+print(summary_extra.round(2).to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>variance</th>
-      <th>iqr</th>
-      <th>skewness</th>
-      <th>kurtosis</th>
-      <th>cv_percent</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>price</th>
-      <td>41011.52</td>
-      <td>105.00</td>
-      <td>14.71</td>
-      <td>380.61</td>
-      <td>135.26</td>
-    </tr>
-    <tr>
-      <th>rating</th>
-      <td>0.33</td>
-      <td>1.00</td>
-      <td>-0.04</td>
-      <td>-1.19</td>
-      <td>14.32</td>
-    </tr>
-    <tr>
-      <th>number_of_reviews</th>
-      <td>1866.35</td>
-      <td>21.00</td>
-      <td>3.63</td>
-      <td>17.85</td>
-      <td>192.23</td>
-    </tr>
-    <tr>
-      <th>availability_365</th>
-      <td>17331.74</td>
-      <td>226.00</td>
-      <td>0.77</td>
-      <td>-0.98</td>
-      <td>117.23</td>
-    </tr>
-    <tr>
-      <th>reviews_per_month</th>
-      <td>2.37</td>
-      <td>1.51</td>
-      <td>2.26</td>
-      <td>6.88</td>
-      <td>143.46</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+                       variance     iqr  skewness  kurtosis  cv_percent
+    price              41011.52  105.00     14.71    380.61      135.26
+    rating                 0.33    1.00     -0.04     -1.19       14.32
+    number_of_reviews   1866.35   21.00      3.63     17.85      192.23
+    availability_365   17331.74  226.00      0.77     -0.98      117.23
+    reviews_per_month      2.37    1.51      2.26      6.88      143.46
 
 
 ## 5. Measures of central tendency
@@ -716,70 +205,15 @@ central_tendency['mean'] = analysis_data[numeric_columns].mean()
 central_tendency['median'] = analysis_data[numeric_columns].median()
 central_tendency['mode'] = analysis_data[numeric_columns].mode().iloc[0]
 
-central_tendency.round(2)
+print(central_tendency.round(2).to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>mean</th>
-      <th>median</th>
-      <th>mode</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>price</th>
-      <td>149.73</td>
-      <td>105.00</td>
-      <td>150.0</td>
-    </tr>
-    <tr>
-      <th>rating</th>
-      <td>4.01</td>
-      <td>4.03</td>
-      <td>5.0</td>
-    </tr>
-    <tr>
-      <th>number_of_reviews</th>
-      <td>22.47</td>
-      <td>5.00</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>availability_365</th>
-      <td>112.30</td>
-      <td>44.00</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>reviews_per_month</th>
-      <td>1.07</td>
-      <td>0.37</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+                         mean  median   mode
+    price              149.73  105.00  150.0
+    rating               4.01    4.03    5.0
+    number_of_reviews   22.47    5.00    0.0
+    availability_365   112.30   44.00    0.0
+    reviews_per_month    1.07    0.37    0.0
 
 
 The mean price is higher than the median price. This suggests that expensive listings pull the average upward.
@@ -798,88 +232,15 @@ quantile_table['q3'] = analysis_data[numeric_columns].quantile(0.75)
 quantile_table['max'] = analysis_data[numeric_columns].max()
 quantile_table['iqr'] = quantile_table['q3'] - quantile_table['q1']
 
-quantile_table.round(2)
+print(quantile_table.round(2).to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>min</th>
-      <th>q1</th>
-      <th>median</th>
-      <th>q3</th>
-      <th>max</th>
-      <th>iqr</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>price</th>
-      <td>10.0</td>
-      <td>70.00</td>
-      <td>105.00</td>
-      <td>175.00</td>
-      <td>8000.00</td>
-      <td>105.00</td>
-    </tr>
-    <tr>
-      <th>rating</th>
-      <td>3.0</td>
-      <td>3.52</td>
-      <td>4.03</td>
-      <td>4.51</td>
-      <td>5.00</td>
-      <td>1.00</td>
-    </tr>
-    <tr>
-      <th>number_of_reviews</th>
-      <td>0.0</td>
-      <td>1.00</td>
-      <td>5.00</td>
-      <td>22.00</td>
-      <td>510.00</td>
-      <td>21.00</td>
-    </tr>
-    <tr>
-      <th>availability_365</th>
-      <td>0.0</td>
-      <td>0.00</td>
-      <td>44.00</td>
-      <td>226.00</td>
-      <td>365.00</td>
-      <td>226.00</td>
-    </tr>
-    <tr>
-      <th>reviews_per_month</th>
-      <td>0.0</td>
-      <td>0.04</td>
-      <td>0.37</td>
-      <td>1.55</td>
-      <td>16.22</td>
-      <td>1.51</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+                        min     q1  median      q3      max     iqr
+    price              10.0  70.00  105.00  175.00  8000.00  105.00
+    rating              3.0   3.52    4.03    4.51     5.00    1.00
+    number_of_reviews   0.0   1.00    5.00   22.00   510.00   21.00
+    availability_365    0.0   0.00   44.00  226.00   365.00  226.00
+    reviews_per_month   0.0   0.04    0.37    1.55    16.22    1.51
 
 
 For `price`, Q1 and Q3 show the middle half of the market. This is useful because prices have many high outliers.
@@ -974,7 +335,7 @@ print('IQR:', round(price_iqr, 2))
 print('Upper outlier boundary:', round(price_upper, 2))
 print('Number of price outliers:', len(price_outliers))
 
-price_outliers[['listing_id', 'name', 'room_type', 'borough', 'price']].sort_values('price', ascending=False).head(10)
+print(price_outliers[['listing_id', 'name', 'room_type', 'borough', 'price']].sort_values('price', ascending=False).head(10).to_string(index=False))
 ```
 
     Q1: 70.0
@@ -983,121 +344,17 @@ price_outliers[['listing_id', 'name', 'room_type', 'borough', 'price']].sort_val
     IQR: 105.0
     Upper outlier boundary: 332.5
     Number of price outliers: 569
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>listing_id</th>
-      <th>name</th>
-      <th>room_type</th>
-      <th>borough</th>
-      <th>price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>852</th>
-      <td>2953058</td>
-      <td>Film Location</td>
-      <td>Entire place</td>
-      <td>Brooklyn</td>
-      <td>8000.0</td>
-    </tr>
-    <tr>
-      <th>726</th>
-      <td>2243699</td>
-      <td>SuperBowl Penthouse Loft 3,000 sqft</td>
-      <td>Entire place</td>
-      <td>Manhattan</td>
-      <td>5250.0</td>
-    </tr>
-    <tr>
-      <th>5163</th>
-      <td>20654227</td>
-      <td>Fulton 2</td>
-      <td>Entire place</td>
-      <td>Brooklyn</td>
-      <td>5000.0</td>
-    </tr>
-    <tr>
-      <th>5845</th>
-      <td>22296197</td>
-      <td>Chelsea Gallery for events, exhibitions, fashion</td>
-      <td>Entire place</td>
-      <td>Manhattan</td>
-      <td>4160.0</td>
-    </tr>
-    <tr>
-      <th>8702</th>
-      <td>33171891</td>
-      <td>30 days minimum Time square West Midtown apart...</td>
-      <td>Entire place</td>
-      <td>Manhattan</td>
-      <td>4100.0</td>
-    </tr>
-    <tr>
-      <th>721</th>
-      <td>2224896</td>
-      <td>NYC SuperBowl Wk 5 Bdrs River View</td>
-      <td>Entire place</td>
-      <td>Manhattan</td>
-      <td>4000.0</td>
-    </tr>
-    <tr>
-      <th>7043</th>
-      <td>27629043</td>
-      <td>A Night at Anchor Aboard Yacht Ventura</td>
-      <td>Entire place</td>
-      <td>Manhattan</td>
-      <td>3750.0</td>
-    </tr>
-    <tr>
-      <th>5991</th>
-      <td>22779746</td>
-      <td>East 7th Street III by (Hidden by Airbnb)</td>
-      <td>Entire place</td>
-      <td>Manhattan</td>
-      <td>3518.0</td>
-    </tr>
-    <tr>
-      <th>8508</th>
-      <td>32476606</td>
-      <td>Recently Renovated &amp; Furnished Apt- Room avail...</td>
-      <td>Private Room</td>
-      <td>Manhattan</td>
-      <td>2850.0</td>
-    </tr>
-    <tr>
-      <th>740</th>
-      <td>2274084</td>
-      <td>3 Bedroom Apartment</td>
-      <td>Entire place</td>
-      <td>Manhattan</td>
-      <td>2750.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+     listing_id                                               name    room_type   borough  price
+        2953058                                      Film Location Entire place  Brooklyn 8000.0
+        2243699                SuperBowl Penthouse Loft 3,000 sqft Entire place Manhattan 5250.0
+       20654227                                           Fulton 2 Entire place  Brooklyn 5000.0
+       22296197   Chelsea Gallery for events, exhibitions, fashion Entire place Manhattan 4160.0
+       33171891 30 days minimum Time square West Midtown apartment Entire place Manhattan 4100.0
+        2224896                NYC SuperBowl Wk 5 Bdrs River View  Entire place Manhattan 4000.0
+       27629043             A Night at Anchor Aboard Yacht Ventura Entire place Manhattan 3750.0
+       22779746          East 7th Street III by (Hidden by Airbnb) Entire place Manhattan 3518.0
+       32476606 Recently Renovated & Furnished Apt- Room available Private Room Manhattan 2850.0
+        2274084                                3 Bedroom Apartment Entire place Manhattan 2750.0
 
 
 The boxplot confirms that there are many high price outliers. This is why the median is a better typical value for price than the mean.
@@ -1141,11 +398,8 @@ plt.show()
 
 
 ```python
-rated_data['rating'].describe().round(2)
+print(rated_data['rating'].describe().round(2).to_string())
 ```
-
-
-
 
     count    7922.00
     mean        4.01
@@ -1155,8 +409,6 @@ rated_data['rating'].describe().round(2)
     50%         4.03
     75%         4.51
     max         5.00
-    Name: rating, dtype: float64
-
 
 
 Most ratings are relatively high. The distribution is not as extreme as price, but it is still not perfectly symmetric.
@@ -1189,88 +441,18 @@ plt.show()
 
 
 ```python
-df_clean[['availability_365', 'number_of_reviews', 'reviews_per_month']].describe().round(2)
+print(df_clean[['availability_365', 'number_of_reviews', 'reviews_per_month']].describe().round(2).to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>availability_365</th>
-      <th>number_of_reviews</th>
-      <th>reviews_per_month</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>9993.00</td>
-      <td>9993.00</td>
-      <td>9993.00</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>112.30</td>
-      <td>22.47</td>
-      <td>1.07</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>131.65</td>
-      <td>43.20</td>
-      <td>1.54</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>0.00</td>
-      <td>0.00</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>0.00</td>
-      <td>1.00</td>
-      <td>0.04</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>44.00</td>
-      <td>5.00</td>
-      <td>0.37</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>226.00</td>
-      <td>22.00</td>
-      <td>1.55</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>365.00</td>
-      <td>510.00</td>
-      <td>16.22</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+           availability_365  number_of_reviews  reviews_per_month
+    count           9993.00            9993.00            9993.00
+    mean             112.30              22.47               1.07
+    std              131.65              43.20               1.54
+    min                0.00               0.00               0.00
+    25%                0.00               1.00               0.04
+    50%               44.00               5.00               0.37
+    75%              226.00              22.00               1.55
+    max              365.00             510.00              16.22
 
 
 `number_of_reviews` is right skewed. Most listings have a small number of reviews, while a few listings have a lot of them.
@@ -1354,89 +536,14 @@ Although this is still mostly a univariate report, grouped summaries help us des
 
 ```python
 price_by_room_type = df_clean.groupby('room_type')['price'].describe().round(2)
-price_by_room_type
+print(price_by_room_type.to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>room_type</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Entire place</th>
-      <td>5172.0</td>
-      <td>208.93</td>
-      <td>249.21</td>
-      <td>10.0</td>
-      <td>120.0</td>
-      <td>163.0</td>
-      <td>225.0</td>
-      <td>8000.0</td>
-    </tr>
-    <tr>
-      <th>Private Room</th>
-      <td>4595.0</td>
-      <td>87.02</td>
-      <td>101.53</td>
-      <td>10.0</td>
-      <td>53.0</td>
-      <td>70.0</td>
-      <td>95.0</td>
-      <td>2850.0</td>
-    </tr>
-    <tr>
-      <th>Shared Room</th>
-      <td>226.0</td>
-      <td>69.78</td>
-      <td>127.28</td>
-      <td>10.0</td>
-      <td>35.0</td>
-      <td>50.0</td>
-      <td>75.0</td>
-      <td>1800.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+                   count    mean     std   min    25%    50%    75%     max
+    room_type                                                              
+    Entire place  5172.0  208.93  249.21  10.0  120.0  163.0  225.0  8000.0
+    Private Room  4595.0   87.02  101.53  10.0   53.0   70.0   95.0  2850.0
+    Shared Room    226.0   69.78  127.28  10.0   35.0   50.0   75.0  1800.0
 
 
 
@@ -1458,111 +565,16 @@ plt.show()
 
 ```python
 price_by_borough = df_clean.groupby('borough')['price'].describe().round(2)
-price_by_borough
+print(price_by_borough.to_string())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>count</th>
-      <th>mean</th>
-      <th>std</th>
-      <th>min</th>
-      <th>25%</th>
-      <th>50%</th>
-      <th>75%</th>
-      <th>max</th>
-    </tr>
-    <tr>
-      <th>borough</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Bronx</th>
-      <td>229.0</td>
-      <td>88.63</td>
-      <td>98.62</td>
-      <td>20.0</td>
-      <td>45.0</td>
-      <td>65.0</td>
-      <td>99.0</td>
-      <td>1000.0</td>
-    </tr>
-    <tr>
-      <th>Brooklyn</th>
-      <td>4075.0</td>
-      <td>123.06</td>
-      <td>185.36</td>
-      <td>10.0</td>
-      <td>60.0</td>
-      <td>90.0</td>
-      <td>150.0</td>
-      <td>8000.0</td>
-    </tr>
-    <tr>
-      <th>Manhattan</th>
-      <td>4436.0</td>
-      <td>192.36</td>
-      <td>232.41</td>
-      <td>10.0</td>
-      <td>93.0</td>
-      <td>150.0</td>
-      <td>220.0</td>
-      <td>5250.0</td>
-    </tr>
-    <tr>
-      <th>Queens</th>
-      <td>1180.0</td>
-      <td>96.95</td>
-      <td>102.80</td>
-      <td>10.0</td>
-      <td>50.0</td>
-      <td>72.0</td>
-      <td>110.0</td>
-      <td>2000.0</td>
-    </tr>
-    <tr>
-      <th>Staten Island</th>
-      <td>73.0</td>
-      <td>91.89</td>
-      <td>58.60</td>
-      <td>29.0</td>
-      <td>50.0</td>
-      <td>75.0</td>
-      <td>110.0</td>
-      <td>300.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+                    count    mean     std   min   25%    50%    75%     max
+    borough                                                                
+    Bronx           229.0   88.63   98.62  20.0  45.0   65.0   99.0  1000.0
+    Brooklyn       4075.0  123.06  185.36  10.0  60.0   90.0  150.0  8000.0
+    Manhattan      4436.0  192.36  232.41  10.0  93.0  150.0  220.0  5250.0
+    Queens         1180.0   96.95  102.80  10.0  50.0   72.0  110.0  2000.0
+    Staten Island    73.0   91.89   58.60  29.0  50.0   75.0  110.0   300.0
 
 
 
